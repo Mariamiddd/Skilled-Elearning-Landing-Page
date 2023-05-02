@@ -8,13 +8,12 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
 }
-.header{
+header{
     position: relative;
     display: flex;
     flex-direction: row;
-    z-index: 1;
-    margin-right: 16px;
     margin-left: 16px;
+    margin-right: 16px;
     margin-top: 16px;
     align-items: center;
     justify-content: space-between;
@@ -39,11 +38,11 @@ button:hover{
     cursor: pointer;
     background-color: #666CA3;
 }
-.main1{
+main{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+
 }
 .text{
     align-self: center;
@@ -108,16 +107,15 @@ button:hover{
     padding-bottom: 80px;
 }
 .wrapper{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    display: grid;
+    align-self: center;
+
 }
 .box{
     position: relative;
     padding-left: 28px;
     height: 259px;
-    width: 343px;
+    max-width: 343px;
     border-radius: 10px;    
     background: #ffffff;
     box-shadow: 0px 25px 50px 0px #06168D0B;
@@ -184,32 +182,34 @@ span{
     .header{
         margin: 24px 40px 0 39px;
     }
+    main{
+        display: grid;
+        padding-left: 39px;
+        padding-right: 39px;
+    }
+    .text{
+        align-self: flex-start;
+    }
     .desktopimg, .mobileimg{
         display: none;
-    }
-    .text{
-        margin-left: 39px;
-    }
-    .text{
-        align-self: baseline;
     }
 
     .tabletimg{
         display: flex;
         position: absolute;
         max-width: 100%;
-        right: -35%;
-        top: -10%;
+        right: -30%;
+        top: -5%;
     }
     .box{
         height: 259px;
-        width: 340px;
+        max-width: 340px;
         
     }
     .coursedescription{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         margin-top: 200px;
         column-gap: 10px;
         row-gap: 20px;
@@ -223,7 +223,6 @@ span{
     .coursetitle{
         position: relative; 
         top: 40px;
-        left: 4px;
         height: 259px;
         width: 339px;
         border-radius: 10px;
@@ -239,11 +238,12 @@ span{
 
 }
 @media only screen and (min-width: 992px) {
-    .header{
+    header{
         margin: 24px 165px 0 165px;
     }
-    .text{
-        margin-left: 165px;
+    main{
+        padding-left: 165px;
+        padding-right: 165px;
     }
     .mainh1{
         width: 54ch;
@@ -276,6 +276,7 @@ span{
         margin-top: 180px;
         display: grid ;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         column-gap: 30px;
         row-gap: 40px;
         padding-bottom: 140px;
