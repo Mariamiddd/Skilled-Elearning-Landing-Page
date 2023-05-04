@@ -146,6 +146,10 @@ span{
     font-size: 18px;
     font-weight: 700;    
 }
+span:hover{
+    cursor: pointer;
+    color: #FFA7C3;
+}
 .footer{ 
     display: flex;
     align-items: center;
