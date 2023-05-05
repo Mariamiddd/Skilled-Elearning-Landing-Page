@@ -32,7 +32,8 @@ button{
     height: 48px;
     width: 140px;
     border-radius: 28px;
-    border: none;    
+    border: none;  
+    z-index: 1;  
 }
 button:hover{
     cursor: pointer;
@@ -137,12 +138,12 @@ main{
     line-height: 26px;
     
 }
-span{
+.start{
     color: #F74780;
     font-size: 18px;
     font-weight: 700;    
 }
-span:hover{
+.start:hover{
     cursor: pointer;
     color: #FFA7C3;
 }
